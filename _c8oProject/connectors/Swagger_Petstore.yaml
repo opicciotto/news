@@ -1,0 +1,624 @@
+baseDir: /v2
+https: true
+port: 443
+server: petstore.swagger.io
+↓_pet__petId__DELETE [transactions.JsonHttpTransaction]: 
+  comment: Deletes a pet
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/x-www-form-urlencoded
+  httpVerb: DELETE
+  includeDataType: false
+  subDir: /pet/{petId}
+  ↓__header_api_key [variables.RequestableHttpVariable-1623245064586]: 
+  ↓petId [variables.RequestableHttpVariable-1623245064588]: 
+    comment: Pet id to delete
+    description: Pet id to delete
+    required: true
+    value: 
+↓_pet__petId__GET [transactions.JsonHttpTransaction]: 
+  comment: Find pet by ID
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/x-www-form-urlencoded
+  includeDataType: false
+  subDir: /pet/{petId}
+  ↓petId [variables.RequestableHttpVariable-1623245064574]: 
+    comment: ID of pet to return
+    description: ID of pet to return
+    required: true
+    value: 
+↓_pet__petId__POST [transactions.JsonHttpTransaction]: 
+  comment: Updates a pet in the store with form data
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/x-www-form-urlencoded
+  httpVerb: POST
+  includeDataType: false
+  subDir: /pet/{petId}
+  ↓petId [variables.RequestableHttpVariable-1623245064578]: 
+    comment: ID of pet that needs to be updated
+    description: ID of pet that needs to be updated
+    required: true
+    value: 
+  ↓name [variables.RequestableHttpVariable-1623245064580]: 
+    comment: Updated name of the pet
+    description: Updated name of the pet
+    httpMethod: POST
+    httpName: name
+  ↓status [variables.RequestableHttpVariable-1623245064582]: 
+    comment: Updated status of the pet
+    description: Updated status of the pet
+    httpMethod: POST
+    httpName: status
+↓_pet__petId__uploadImage_POST [transactions.JsonHttpTransaction]: 
+  comment: uploads an image
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/x-www-form-urlencoded
+  httpVerb: POST
+  includeDataType: false
+  subDir: /pet/{petId}/uploadImage
+  ↓petId [variables.RequestableHttpVariable-1623245064550]: 
+    comment: ID of pet to update
+    description: ID of pet to update
+    required: true
+    value: 
+  ↓additionalMetadata [variables.RequestableHttpVariable-1623245064552]: 
+    comment: Additional data to pass to server
+    description: Additional data to pass to server
+    httpMethod: POST
+    httpName: additionalMetadata
+  ↓file [variables.RequestableHttpVariable-1623245064554]: 
+    comment: file to upload
+    description: file to upload
+    doFileUploadMode: multipartFormData
+    httpMethod: POST
+    httpName: file
+↓_pet_findByStatus_GET [transactions.JsonHttpTransaction]: 
+  comment: Finds Pets by status
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/x-www-form-urlencoded
+  includeDataType: false
+  subDir: /pet/findByStatus
+  ↓status [variables.RequestableHttpMultiValuedVariable-1623245064566]: 
+    comment: Status values that need to be considered for filter
+    description: Status values that need to be considered for filter
+    httpName: status
+    required: true
+    value: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: available
+↓_pet_findByTags_GET [transactions.JsonHttpTransaction]: 
+  comment: Finds Pets by tags
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/x-www-form-urlencoded
+  includeDataType: false
+  subDir: /pet/findByTags
+  ↓tags [variables.RequestableHttpMultiValuedVariable-1623245064570]: 
+    comment: Tags to filter by
+    description: Tags to filter by
+    httpName: tags
+    required: true
+    value: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+↓_pet_POST [transactions.JsonHttpTransaction]: 
+  comment: Add a new pet to the store
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/json
+  httpVerb: POST
+  includeDataType: false
+  subDir: /pet
+  ↓__body [variables.RequestableHttpVariable-1623245064562]: 
+    comment: Pet object that needs to be added to the store
+    description: Pet object that needs to be added to the store
+    httpMethod: POST
+    httpName: body
+    required: true
+    value: 
+↓_pet_PUT [transactions.JsonHttpTransaction]: 
+  comment: Update an existing pet
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/json
+  httpVerb: PUT
+  includeDataType: false
+  subDir: /pet
+  ↓__body [variables.RequestableHttpVariable-1623245064558]: 
+    comment: Pet object that needs to be added to the store
+    description: Pet object that needs to be added to the store
+    httpMethod: POST
+    httpName: body
+    required: true
+    value: 
+↓_store_inventory_GET [transactions.JsonHttpTransaction]: 
+  comment: Returns pet inventories by status
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/x-www-form-urlencoded
+  includeDataType: false
+  subDir: /store/inventory
+↓_store_order__orderId__DELETE [transactions.JsonHttpTransaction]: 
+  comment: Delete purchase order by ID
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/x-www-form-urlencoded
+  httpVerb: DELETE
+  includeDataType: false
+  subDir: /store/order/{orderId}
+  ↓orderId [variables.RequestableHttpVariable-1623245064602]: 
+    comment: ID of the order that needs to be deleted
+    description: ID of the order that needs to be deleted
+    required: true
+    value: 
+↓_store_order__orderId__GET [transactions.JsonHttpTransaction]: 
+  comment: Find purchase order by ID
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/x-www-form-urlencoded
+  includeDataType: false
+  subDir: /store/order/{orderId}
+  ↓orderId [variables.RequestableHttpVariable-1623245064598]: 
+    comment: ID of pet that needs to be fetched
+    description: ID of pet that needs to be fetched
+    required: true
+    value: 
+↓_store_order_POST [transactions.JsonHttpTransaction]: 
+  comment: Place an order for a pet
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/json
+  httpVerb: POST
+  includeDataType: false
+  subDir: /store/order
+  ↓__body [variables.RequestableHttpVariable-1623245064594]: 
+    comment: order placed for purchasing the pet
+    description: order placed for purchasing the pet
+    httpMethod: POST
+    httpName: body
+    required: true
+    value: 
+↓_user__username__DELETE [transactions.JsonHttpTransaction]: 
+  comment: Delete user
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/x-www-form-urlencoded
+  httpVerb: DELETE
+  includeDataType: false
+  subDir: /user/{username}
+  ↓username [variables.RequestableHttpVariable-1623245064620]: 
+    comment: The name that needs to be deleted
+    description: The name that needs to be deleted
+    required: true
+    value: 
+↓_user__username__GET [transactions.JsonHttpTransaction]: 
+  comment: Get user by user name
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/x-www-form-urlencoded
+  includeDataType: false
+  subDir: /user/{username}
+  ↓username [variables.RequestableHttpVariable-1623245064610]: 
+    comment: The name that needs to be fetched. Use user1 for testing. 
+    description: The name that needs to be fetched. Use user1 for testing. 
+    required: true
+    value: 
+↓_user__username__PUT [transactions.JsonHttpTransaction]: 
+  comment: Updated user
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/json
+  httpVerb: PUT
+  includeDataType: false
+  subDir: /user/{username}
+  ↓username [variables.RequestableHttpVariable-1623245064614]: 
+    comment: name that need to be updated
+    description: name that need to be updated
+    required: true
+    value: 
+  ↓__body [variables.RequestableHttpVariable-1623245064616]: 
+    comment: Updated user object
+    description: Updated user object
+    httpMethod: POST
+    httpName: body
+    required: true
+    value: 
+↓_user_createWithArray_POST [transactions.JsonHttpTransaction]: 
+  comment: Creates list of users with given input array
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/json
+  httpVerb: POST
+  includeDataType: false
+  subDir: /user/createWithArray
+  ↓__body [variables.RequestableHttpVariable-1623245064632]: 
+    comment: List of user object
+    description: List of user object
+    httpMethod: POST
+    httpName: body
+    required: true
+    value: 
+↓_user_createWithList_POST [transactions.JsonHttpTransaction]: 
+  comment: Creates list of users with given input array
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/json
+  httpVerb: POST
+  includeDataType: false
+  subDir: /user/createWithList
+  ↓__body [variables.RequestableHttpVariable-1623245064606]: 
+    comment: List of user object
+    description: List of user object
+    httpMethod: POST
+    httpName: body
+    required: true
+    value: 
+↓_user_login_GET [transactions.JsonHttpTransaction]: 
+  comment: Logs user into the system
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/x-www-form-urlencoded
+  includeDataType: false
+  subDir: /user/login
+  ↓username [variables.RequestableHttpVariable-1623245064624]: 
+    comment: The user name for login
+    description: The user name for login
+    httpName: username
+    required: true
+    value: 
+  ↓password [variables.RequestableHttpVariable-1623245064626]: 
+    comment: The password for login in clear text
+    description: The password for login in clear text
+    httpName: password
+    required: true
+    value: 
+↓_user_logout_GET [transactions.JsonHttpTransaction]: 
+  comment: Logs out current logged in user session
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/x-www-form-urlencoded
+  includeDataType: false
+  subDir: /user/logout
+↓_user_POST [transactions.JsonHttpTransaction]: 
+  comment: Create user
+  httpInfo: true
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/json
+  httpVerb: POST
+  includeDataType: false
+  subDir: /user
+  ↓__body [variables.RequestableHttpVariable-1623245064636]: 
+    comment: Created user object
+    description: Created user object
+    httpMethod: POST
+    httpName: body
+    required: true
+    value: 

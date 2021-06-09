@@ -1,0 +1,67 @@
+↓Call_Transaction [steps.TransactionStep-1623245419011]: 
+  sourceTransaction: WorkShop2.NewsConnector.GetNewsData
+↓Iterator [steps.IteratorStep-1623245481270]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1623245419011
+        - java.lang.String: 
+          - ↑value: ./document/rss/channel/item
+  ↓jSimpleSource [steps.SimpleSourceStep-1623246010620]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1623245481270
+          - java.lang.String: 
+            - ↑value: ./title/text()
+    variableName: jCapsTitle
+  ↓jIf [steps.IfStep-1623246360407]: 
+    condition: jCapsTitle.indexOf(filter) != -1
+    ↓Complex [steps.XMLComplexStep-1623245515824]: 
+      nodeName: News
+      ↓Element [steps.XMLElementStep-1623245540814]: 
+        nodeName: Title
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1623245481270
+              - java.lang.String: 
+                - ↑value: ./title/text()
+      ↓Element1 [steps.XMLElementStep-1623245554771]: 
+        nodeName: Description
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1623245481270
+              - java.lang.String: 
+                - ↑value: ./description/text()
+      ↓Element11 [steps.XMLElementStep-1623245570356]: 
+        nodeName: Image
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1623245481270
+              - java.lang.String: 
+                - ↑value: ./group/content[1]/@url
+      ↓ComputeCapsTitle [steps.SimpleStep-1623246067180]: 
+        expression: |
+          jCapsTitle = "|" + jCapsTitle.toUpperCase() + "|";
+           
+      ↓jElement [steps.ElementStep-1623246193049]: 
+        expression: jCapsTitle
+        nodeName: CapsTitle
+↓filter [variables.RequestableVariable-1623246292838]: 
+  value:  
+↓testOK [core.TestCase]: 
+  ↓filter [variables.TestCaseVariable-1623246426999]: 
+    value: Biden

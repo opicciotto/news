@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:WorkShop2_ns="http://www.convertigo.com/convertigo/projects/WorkShop2" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.convertigo.com/convertigo/projects/WorkShop2">
+    <xsd:element name="NewsConnector__GetNewsData" type="WorkShop2_ns:NewsConnector__GetNewsDataRequestData">
+        <xsd:annotation/>
+    </xsd:element>
+    <xsd:element name="NewsConnector__GetNewsDataResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="response" type="WorkShop2_ns:NewsConnector__GetNewsDataResponseData"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="NewsConnector__GetNewsDataResponseType">
+        <xsd:sequence>
+            <xsd:element name="document" type="WorkShop2_ns:NewsConnector__GetNewsDataResponseData"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="NewsConnector__GetNewsDataRequestData">
+        <xsd:sequence>
+            <xsd:element name="date" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="NewsConnector_GetNewsData_document_rss_channel_imageType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="url" type="xsd:anyURI"/>
+            <xsd:element minOccurs="0" name="title" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="link" type="xsd:anyURI"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="NewsConnector_GetNewsData_document_rss_channel_atom10-linkType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="href" type="xsd:anyURI"/>
+                <xsd:attribute name="rel" type="xsd:string"/>
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="NewsConnector_GetNewsData_document_rss_channel_feedburner-infoType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="uri" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="NewsConnector_GetNewsData_document_rss_channel_item_guidType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="isPermaLink" type="xsd:boolean"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="NewsConnector_GetNewsData_document_rss_channel_item_media-group_media-contentType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="height" type="xsd:short"/>
+                <xsd:attribute name="medium" type="xsd:string"/>
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+                <xsd:attribute name="url" type="xsd:anyURI"/>
+                <xsd:attribute name="width" type="xsd:short"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="NewsConnector_GetNewsData_document_rss_channel_item_media-groupType">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="content" type="WorkShop2_ns:NewsConnector_GetNewsData_document_rss_channel_item_media-group_media-contentType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="NewsConnector_GetNewsData_document_rss_channel_itemType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="title" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="link" type="xsd:anyURI"/>
+            <xsd:element minOccurs="0" name="guid" type="WorkShop2_ns:NewsConnector_GetNewsData_document_rss_channel_item_guidType"/>
+            <xsd:element minOccurs="0" name="pubDate" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="group" type="WorkShop2_ns:NewsConnector_GetNewsData_document_rss_channel_item_media-groupType"/>
+            <xsd:element minOccurs="0" name="description" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="NewsConnector_GetNewsData_document_rss_channelType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="title" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="description" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="link" type="xsd:anyURI"/>
+            <xsd:element minOccurs="0" name="image" type="WorkShop2_ns:NewsConnector_GetNewsData_document_rss_channel_imageType"/>
+            <xsd:element minOccurs="0" name="generator" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="lastBuildDate" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pubDate" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="copyright" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="language" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ttl" type="xsd:byte"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="link" type="WorkShop2_ns:NewsConnector_GetNewsData_document_rss_channel_atom10-linkType"/>
+            <xsd:element minOccurs="0" name="info" type="WorkShop2_ns:NewsConnector_GetNewsData_document_rss_channel_feedburner-infoType"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="item" type="WorkShop2_ns:NewsConnector_GetNewsData_document_rss_channel_itemType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="NewsConnector_GetNewsData_document_rssType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="channel" type="WorkShop2_ns:NewsConnector_GetNewsData_document_rss_channelType"/>
+        </xsd:sequence>
+        <xsd:attribute name="version" type="xsd:double"/>
+    </xsd:complexType>
+    <xsd:complexType name="NewsConnector__GetNewsDataResponseData">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="rss" type="WorkShop2_ns:NewsConnector_GetNewsData_document_rssType"/>
+            <xsd:element minOccurs="0" name="error" type="WorkShop2_ns:ConvertigoError"/>
+        </xsd:sequence>
+        <xsd:attribute name="connector" type="xsd:string"/>
+        <xsd:attribute name="context" type="xsd:string"/>
+        <xsd:attribute name="contextId" type="xsd:string"/>
+        <xsd:attribute name="fromStub" type="xsd:boolean"/>
+        <xsd:attribute name="fromcache" type="xsd:boolean"/>
+        <xsd:attribute name="generated" type="xsd:string"/>
+        <xsd:attribute name="project" type="xsd:string"/>
+        <xsd:attribute name="sequence" type="xsd:string"/>
+        <xsd:attribute name="signature" type="xsd:long"/>
+        <xsd:attribute name="transaction" type="xsd:string"/>
+        <xsd:attribute name="version" type="xsd:string"/>
+        <xsd:attribute name="screenclass" type="xsd:string"/>
+        <xsd:attribute name="userReference" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoErrorContextVariable">
+        <xsd:attribute name="name" type="xsd:string"/>
+        <xsd:attribute name="value" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoErrorContext">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="variable" type="WorkShop2_ns:ConvertigoErrorContextVariable"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoError">
+        <xsd:sequence minOccurs="0">
+            <xsd:element name="code" type="xsd:integer"/>
+            <xsd:element name="message" type="xsd:string"/>
+            <xsd:element name="details" type="xsd:string"/>
+            <xsd:element name="context" type="WorkShop2_ns:ConvertigoErrorContext"/>
+            <xsd:element name="exception" type="xsd:string"/>
+            <xsd:element name="stacktrace" type="xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute name="project" type="xsd:string"/>
+        <xsd:attribute name="connector" type="xsd:string"/>
+        <xsd:attribute name="transaction" type="xsd:string"/>
+        <xsd:attribute name="sequence" type="xsd:string"/>
+        <xsd:attribute name="type">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="c8o"/>
+                    <xsd:enumeration value="project"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+    </xsd:complexType>
+</xsd:schema>

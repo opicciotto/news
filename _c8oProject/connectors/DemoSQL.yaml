@@ -1,0 +1,8 @@
+jdbcDriverClassName: net.sourceforge.jtds.jdbc.Driver
+jdbcURL: jdbc:jtds:sqlserver://<server_name>:<port(optional)>/<database_name>
+↓Default_transaction [transactions.SqlTransaction]: 
+  ↑default: true
+↓GetProducts [transactions.SqlTransaction]: 
+  sqlQuery: select * from products where id % {{id}}
+  ↓id [variables.RequestableVariable-1623245265186]: 
+    description: id

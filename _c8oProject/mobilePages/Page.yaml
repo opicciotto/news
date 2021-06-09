@@ -1,0 +1,157 @@
+↑isRoot: true
+comment: My First Page as root page
+preloadPriority: high
+scriptContent: 
+  - xmlizable: 
+    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+      →: |
+        /*Begin_c8o_PageImport*/
+        /*End_c8o_PageImport*/
+        /*Begin_c8o_PageDeclaration*/
+        	/*End_c8o_PageDeclaration*/
+        /*Begin_c8o_PageConstructor*/
+        		/*End_c8o_PageConstructor*/
+        /*Begin_c8o_PageFunction*/
+        	/*End_c8o_PageFunction*/
+        
+segment: path-to-page
+title: First page
+↓Header [mobile.components.UIDynamicElement-1491634212350]: 
+  beanData: '{"ionBean":"Header"}'
+  comment: Page header
+  tagName: ion-header
+  ↓NavBar [mobile.components.UIDynamicElement-1491634231108]: 
+    beanData: '{"ionBean":"NavBar","IonColor":"plain:primary"}'
+    tagName: ion-navbar
+    ↓BarTitle [mobile.components.UIDynamicElement-1491634265317]: 
+      beanData: '{"ionBean":"BarTitle"}'
+      tagName: ion-title
+      ↓Text [mobile.components.UIText-1491634275121]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:News App
+    ↓Button [mobile.components.UIDynamicElement-1491634442029]: 
+      beanData: '{"ionBean":"Button","MenuMode":"plain:menuToggle"}'
+      comment: A button to toggle the menu
+      tagName: button
+      ↓Icon [mobile.components.UIDynamicElement-1491634475867]: 
+        beanData: '{"ionBean":"Icon","IconName":"plain:menu"}'
+        tagName: ion-icon
+    ↓ButtonSet [mobile.components.UIDynamicElement-1491634611427]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:right"}'
+      tagName: ion-buttons
+      ↓Button [mobile.components.UIDynamicElement-1491634621907]: 
+        beanData: '{"ionBean":"Button"}'
+        tagName: button
+        ↓Icon [mobile.components.UIDynamicElement-1491634637555]: 
+          beanData: '{"ionBean":"Icon","IconName":"plain:more"}'
+          tagName: ion-icon
+↓Content [mobile.components.UIDynamicElement-1489674805352]: 
+  beanData: '{"ionBean":"Content"}'
+  comment: Page content
+  tagName: ion-content
+  ↓Button [mobile.components.UIDynamicElement-1623247296509]: 
+    beanData: '{"ionBean":"Button"}'
+    tagName: button
+    ↓Text [mobile.components.UIText-1623247311142]: 
+      textValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: plain:Click ME!
+    ↓Event [mobile.components.UIControlEvent-1623247346220]: 
+      ↓CallSequence [mobile.components.UIDynamicAction-1623247361349]: 
+        beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:WorkShop2.GetAndProcessMyNews"}'
+        ↓filter [mobile.components.UIControlVariable-1623249478923]: 
+          comment: new variable
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:filter
+  ↓TextInput [mobile.components.UIDynamicElement-1623249195242]: 
+    beanData: '{"ionBean":"Input","Placeholder":"plain:Type Filter Here"}'
+    tagName: ion-input
+    ↓Attr [mobile.components.UIAttribute-1623249326031]: 
+      attrName: '[(ngModel)]'
+      attrValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:filter
+  ↓Text [mobile.components.UIText-1623249387414]: 
+    textValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:filter
+  ↓ListContainer [mobile.components.UIDynamicElement-1623246951846]: 
+    beanData: '{"ionBean":"List"}'
+    tagName: ion-list
+    ↓Directive [mobile.components.UIControlDirective-1623247059914]: 
+      directiveSource: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: source:{"filter":"Sequence","project":"WorkShop2","input":"","model":{"data":[{"sequence":"WorkShop2.GetAndProcessMyNews","marker":""}],"path":"?.News","prefix":"","suffix":"","custom":"","useCustom":false}}
+      ↓ListItem [mobile.components.UIDynamicElement-1623246967595]: 
+        beanData: '{"ionBean":"ListItem"}'
+        tagName: ion-item
+        ↓Image [mobile.components.UIDynamicElement-1623246995863]: 
+          beanData: '{"ionBean":"Image","url":"source:{\"filter\":\"Iteration\",\"project\":\"WorkShop2\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1623247059914}],\"path\":\"?.Image\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"}'
+          selfClose: true
+          tagName: img
+        ↓TextFormat [mobile.components.UIDynamicElement-1623247422742]: 
+          beanData: '{"ionBean":"TextFormat","TextWrap":"plain:text-wrap"}'
+          tagName: div
+          ↓Heading [mobile.components.UIDynamicTag-1623246982647]: 
+            beanData: '{"ionBean":"Heading"}'
+            tagName: h1
+            ↓Text [mobile.components.UIText-1623247013128]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"WorkShop2","input":"","model":{"data":[{"priority":1623247059914}],"path":"?.Title","prefix":"","suffix":"","custom":"","useCustom":false}}
+          ↓Paragraph [mobile.components.UIDynamicElement-1623246991610]: 
+            beanData: '{"ionBean":"Paragraph"}'
+            tagName: p
+            ↓Text [mobile.components.UIText-1623247017209]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"WorkShop2","input":"","model":{"data":[{"priority":1623247059914}],"path":"?.Description","prefix":"","suffix":"","custom":"","useCustom":false}}
+            ↓Style [mobile.components.UIStyle-1623248975457]: 
+              styleContent: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                  - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                    →: |
+                      '	border: solid 2px red;
+                      	margin-left: 20px;
+                      '
+↓Footer [mobile.components.UIDynamicElement-1491634242460]: 
+  beanData: '{"ionBean":"Footer"}'
+  comment: Page footer
+  tagName: ion-footer
+  ↓ToolBar [mobile.components.UIDynamicElement-1491634317538]: 
+    beanData: '{"ionBean":"ToolBar","IonColor":"plain:primary"}'
+    tagName: ion-toolbar
+    ↓ButtonSet [mobile.components.UIDynamicElement-1491634325595]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:left"}'
+      tagName: ion-buttons
+      ↓Button [mobile.components.UIDynamicElement-1491634332730]: 
+        beanData: '{"ionBean":"Button"}'
+        tagName: button
+        ↓Text [mobile.components.UIText-1491634340354]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Action 1
+    ↓ButtonSet1 [mobile.components.UIDynamicElement-1491634373539]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:right"}'
+      tagName: ion-buttons
+      ↓Button [mobile.components.UIDynamicElement-1491634376874]: 
+        beanData: '{"ionBean":"Button"}'
+        tagName: button
+        ↓Text [mobile.components.UIText-1491634383107]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Action 2
