@@ -1,0 +1,64 @@
+segment: path-to-hello
+title: Title for Hello
+↓Header [mobile.components.UIDynamicElement-1623314613259]: 
+  beanData: '{"ionBean":"Header"}'
+  comment: Page header
+  tagName: ion-header
+  ↓NavBar [mobile.components.UIDynamicElement-1623314613262]: 
+    beanData: '{"ionBean":"NavBar","IonColor":"plain:primary"}'
+    tagName: ion-navbar
+    ↓BarTitle [mobile.components.UIDynamicElement-1623314613265]: 
+      beanData: '{"ionBean":"BarTitle"}'
+      tagName: ion-title
+      ↓Text [mobile.components.UIText-1623314613268]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:Hello
+    ↓Button [mobile.components.UIDynamicElement-1623314613271]: 
+      beanData: '{"ionBean":"Button","MenuMode":"plain:menuToggle"}'
+      comment: A button to toggle the menu
+      tagName: button
+      ↓Icon [mobile.components.UIDynamicElement-1623314613274]: 
+        beanData: '{"ionBean":"Icon","IconName":"plain:menu"}'
+        tagName: ion-icon
+    ↓ButtonSet [mobile.components.UIDynamicElement-1623314613277]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:right"}'
+      tagName: ion-buttons
+      ↓Button [mobile.components.UIDynamicElement-1623314613280]: 
+        beanData: '{"ionBean":"Button"}'
+        tagName: button
+        ↓Icon [mobile.components.UIDynamicElement-1623314613283]: 
+          beanData: '{"ionBean":"Icon","IconName":"plain:more"}'
+          tagName: ion-icon
+↓Content [mobile.components.UIDynamicElement-1623314642517]: 
+  beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
+  ↓Heading [mobile.components.UIDynamicTag-1623314676230]: 
+    beanData: '{"ionBean":"Heading"}'
+    tagName: h1
+    ↓Text [mobile.components.UIText-1623314684307]: 
+      textValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: plain:Hello à tous
+  ↓RangeSlider [mobile.components.UIDynamicElement-1623314714098]: 
+    beanData: |
+      '{
+       "ionBean": "Range",
+       "Min": "plain:0",
+       "Max": "plain:10",
+       "Snaps": "plain:true"
+      }'
+    tagName: ion-range
+    ↓Attr [mobile.components.UIAttribute-1623314738189]: 
+      attrName: '[(ngModel)]'
+      attrValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:qte
+  ↓Text [mobile.components.UIText-1623314842706]: 
+    textValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:qte

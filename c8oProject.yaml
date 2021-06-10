@@ -2,7 +2,7 @@
 ↓WorkShop2 [core.Project]: 
   comment: Convertigo Mobile builder Project
   corsOrigin: =Origin
-  version: 1.0
+  version: 1.1
   ↓DemoSQL [connectors.SqlConnector]: 🗏 connectors/DemoSQL.yaml
   ↓NewsConnector [connectors.HttpConnector]: 🗏 connectors/NewsConnector.yaml
   ↓Swagger_Petstore [connectors.HttpConnector]: 🗏 connectors/Swagger_Petstore.yaml

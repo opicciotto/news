@@ -31,7 +31,7 @@ title: First page
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-            - MobileSmartSourceType: plain:News App
+            - MobileSmartSourceType: plain:News !!!
     ↓Button [mobile.components.UIDynamicElement-1491634442029]: 
       beanData: '{"ionBean":"Button","MenuMode":"plain:menuToggle"}'
       comment: A button to toggle the menu
@@ -85,6 +85,7 @@ title: First page
         - MobileSmartSourceType: script:filter
   ↓ListContainer [mobile.components.UIDynamicElement-1623246951846]: 
     beanData: '{"ionBean":"List"}'
+    comment: Liste des nouvelles
     tagName: ion-list
     ↓Directive [mobile.components.UIControlDirective-1623247059914]: 
       directiveSource: 
@@ -118,6 +119,7 @@ title: First page
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: source:{"filter":"Iteration","project":"WorkShop2","input":"","model":{"data":[{"priority":1623247059914}],"path":"?.Description","prefix":"","suffix":"","custom":"","useCustom":false}}
             ↓Style [mobile.components.UIStyle-1623248975457]: 
+              isEnabled: false
               styleContent: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
