@@ -14,7 +14,7 @@ title: Title for Hello
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-            - MobileSmartSourceType: plain:Hello There
+            - MobileSmartSourceType: plain:Hello
     ↓Button [mobile.components.UIDynamicElement-1623314613271]: 
       beanData: '{"ionBean":"Button","MenuMode":"plain:menuToggle"}'
       comment: A button to toggle the menu
@@ -41,7 +41,7 @@ title: Title for Hello
       textValue: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-          - MobileSmartSourceType: plain:Hello à tous
+          - MobileSmartSourceType: plain:Hello
   ↓RangeSlider [mobile.components.UIDynamicElement-1623314714098]: 
     beanData: |
       '{
